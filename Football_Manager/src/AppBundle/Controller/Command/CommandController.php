@@ -4,6 +4,7 @@ namespace AppBundle\Controller\Command;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class CommandController extends Controller
@@ -11,10 +12,16 @@ class CommandController extends Controller
     /**
      * @Route("/command")
      */
-    public function numberAction()
+    public function pageAction()
     {
-        return new Response(
-            '<html><body>Command Page</body></html>'
-        );
+        $request = Request::createFromGlobals();
+        $path = $request->getPathInfo();
+
+        if (in_array($path, array('', '/command'))) {
+            $response = new Response('<html><body>Welcome to the Command Page</body></html>');
+        } else {
+            $response = new Response('Page not found.', Response::HTTP_NOT_FOUND);
+        }
+        return $response;
     }
 }
