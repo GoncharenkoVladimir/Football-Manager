@@ -21,8 +21,8 @@ class CommandControllerTest extends WebTestCase
     public function testIndexProvider()
     {
         return [
-            ['/command', 200],
-            ['/player', 500],
+            ['/command', 404],
+            ['/player', 404],
         ];
     }
 }
