@@ -20,10 +20,10 @@ class MaineController extends Controller
                         <body>
                             <h2>Welcome to the Home Page</h2>
                             <ul>
-                                <li><a href="http://footballmanager.salsa.ekreative.com/app_dev.php/command">Command Page</a></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
+                                <li><a href="http://footballmanager.com/app_dev.php/command">Command Page</a></li>
+                                <li><a href="http://footballmanager.com/app_dev.php/player">Player Page</a></li>
+                                <li><a href="http://footballmanager.com/app_dev.php/trainer">Trainer Page</a></li>
+                                <li><a href="http://footballmanager.com/app_dev.php/country">Country Page</a></li>
                             </ul>
                         </body>
                     </html>';
