@@ -18,7 +18,7 @@ class TrainerController extends Controller
         $path = $request->getPathInfo();
 
         if (in_array($path, array('', '/trainer'))) {
-            $response = new Response('<html><body>Welcome to the Trainer Page</body></html>');
+            $response = new Response('<html><body><h3 id="title">Welcome to the Trainer Page</h3></body></html>');
         } else {
             $response = new Response('Page not found.', Response::HTTP_NOT_FOUND);
         }

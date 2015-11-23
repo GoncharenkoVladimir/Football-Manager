@@ -18,12 +18,12 @@ class MaineController extends Controller
         $path = $request->getPathInfo();
         $template = '<html>
                         <body>
-                            <h2>Welcome to the Home Page</h2>
+                            <h2 id="title">Welcome to the Home Page</h2>
                             <ul>
-                                <li><a href="http://footballmanager.com/app_dev.php/command">Command Page</a></li>
-                                <li><a href="http://footballmanager.com/app_dev.php/player">Player Page</a></li>
-                                <li><a href="http://footballmanager.com/app_dev.php/trainer">Trainer Page</a></li>
-                                <li><a href="http://footballmanager.com/app_dev.php/country">Country Page</a></li>
+                                <li><a href="/command">Command Page</a></li>
+                                <li><a href="/player">Player Page</a></li>
+                                <li><a href="/trainer">Trainer Page</a></li>
+                                <li><a href="/country">Country Page</a></li>
                             </ul>
                         </body>
                     </html>';

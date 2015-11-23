@@ -18,7 +18,7 @@ class CommandController extends Controller
         $path = $request->getPathInfo();
 
         if (in_array($path, array('', '/command'))) {
-            $response = new Response('<html><body>Welcome to the Command Page</body></html>');
+            $response = new Response('<html><body><h3 id="title">Welcome to the Command Page</h3></body></html>');
         } else {
             $response = new Response('Page not found.', Response::HTTP_NOT_FOUND);
         }
