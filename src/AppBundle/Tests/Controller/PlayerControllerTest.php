@@ -3,7 +3,7 @@ namespace AppBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class CommandControllerTest extends WebTestCase
+class PlayerControllerTest extends WebTestCase
 {
     /**
      * @param $url
