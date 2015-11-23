@@ -5,11 +5,24 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class CommandControllerTest extends WebTestCase
 {
-    public function testIndex()
+    /**
+     * @param $url
+     * @param $code
+     * @dataProvider testIndexProvider
+     */
+    public function testIndex($url, $code)
     {
         $client = static::createClient();
-        $crawler = $client->request('GET', '/command');
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $crawler = $client->request('GET', $url);
+        $this->assertEquals($code, $client->getResponse()->getStatusCode());
         $this->assertContains('Welcome', $crawler->filter('#title')->text());
+    }
+
+    public function testIndexProvider()
+    {
+        return [
+            ['/command', 200],
+            ['/player', 500],
+        ];
     }
 }
