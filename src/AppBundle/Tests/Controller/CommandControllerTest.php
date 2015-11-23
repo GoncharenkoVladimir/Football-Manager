@@ -15,7 +15,6 @@ class CommandControllerTest extends WebTestCase
         $client = static::createClient();
         $crawler = $client->request('GET', $url);
         $this->assertEquals($code, $client->getResponse()->getStatusCode());
-        $this->assertContains('Welcome', $crawler->filter('#title')->text());
     }
 
     public function testIndexProvider()
