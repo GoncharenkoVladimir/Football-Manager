@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use AppBundle\Entity;
 
 class PlayerController extends Controller
 {
@@ -16,6 +17,9 @@ class PlayerController extends Controller
     {
         $request = Request::createFromGlobals();
         $path = $request->getPathInfo();
+
+        $player = new Entity\Players();
+        $player->setName('Vasiliy');
 
         if (in_array($path, array('', '/player'))) {
             $response = new Response('<html><body><h3 id="title">Welcome to the Player Page</h3></body></html>');
