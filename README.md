@@ -30,3 +30,29 @@ P.S. 2 Ресурси для ознайомлення і розумів:
 - http://symfony.com/doc/current/best_practices/configuration.html
 - http://symfony.com/doc/current/best_practices/business-logic.html
 - http://symfony.com/doc/current/best_practices/controllers.html﻿
+
+========================================================================================================================
+
+Частина 2.
+
+1. Встановити nodejs, bower, gulp or grunt.
+2. Встановити один із  Css-фреймворків (Bootstrap, Zurb Foundation, SemanticUI, etc.) через Bower і згенерувати відповідні 
+ресурси у директорію web (css, js, images, fonts, etc.).
+3 Написати twig-темплейти для контроллерів із попередньої частини і оформити у стилі вибраного CSS-фреймворка.
+4. Створити моделі до ваших об'єктів (команда, гравець, тренер, гра, і т.д.) 
+5. Для заповнення моделей даними, радимо використати бібліотеку дл генерації контента (https://github.com/fzaninotto/Faker)
+6. Всі моделі мають генеруватися у відповідному контролері і  передаватися у відповідні темплейти.
+7. Зробити навігацію у темплейтах.
+8. Адаптувати ваші тести 
+9. Підключити travis-ci, scrutinizer-ci
+
+P.S. корисні посилання:
+http://symfony.com/doc/current/book/page_creation.html
+http://symfony.com/doc/current/book/templating.html
+http://symfony.com/doc/current/best_practices/templates.html
+http://symfony.com/doc/current/cookbook/assetic/index.html
+https://www.npmjs.com/
+http://bower.io/
+http://gulpjs.com/
+
+https://scrutinizer-ci.com/﻿
