@@ -1,22 +1,21 @@
 <?php
 
-namespace AppBundle\Controller\Trainer;
+namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use AppBundle\Controller\Trainer;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
-class TrainerController extends Controller
+class MainController extends Controller
 {
     /**
-     * @Route("/trainer", name="trainer")
+     * @Route("/")
      * @Template()
      */
-    public function trainerAction()
+    public function mainAction()
     {
-
+        return [];
     }
 }

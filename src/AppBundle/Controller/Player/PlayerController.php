@@ -2,30 +2,31 @@
 
 namespace AppBundle\Controller\Player;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use AppBundle\Entity;
+use AppBundle\Entity\Players;
+
 
 class PlayerController extends Controller
 {
     /**
-     * @Route("/player")
+     * @Route("/player", name="player")
+     * @Template()
      */
-    public function pageAction()
+    public function playerAction()
     {
-        $request = Request::createFromGlobals();
-        $path = $request->getPathInfo();
 
-        $player = new Entity\Players();
+        $player = new Players();
         $player->setName('Vasiliy');
+        $player->setSecondName('Pupkin');
+        $player->setAge(26);
+        $player->setCountry('Ukraine');
+        $player->setCommand('Dinamo');
+        $player->setNumber(7);
 
-        if (in_array($path, array('', '/player'))) {
-            $response = new Response('<html><body><h3 id="title">Welcome to the Player Page</h3></body></html>');
-        } else {
-            $response = new Response('Page not found.', Response::HTTP_NOT_FOUND);
-        }
-        return $response;
+        return ['player' => $player];
     }
 }
