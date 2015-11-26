@@ -1,7 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: kragen
- * Date: 25.11.15
- * Time: 22:51
- */
+
+namespace AppBundle\Entity;
+
+class Commands
+{
+    protected $name;
+    public function setName($name){
+        $this->name = $name;
+    }
+}

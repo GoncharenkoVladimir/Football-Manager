@@ -1,19 +1,179 @@
 {% extends 'AppBundle::main.html.twig' %}
 
-{% block title %}Player page!!!{% endblock %}
+{% block title %}Football Manager!!!{% endblock %}
 
     {% block content %}
         <div class="baner">
+            <h2 class="text-center">UEFA-2016</h2>
+            <h3 class="text-center">Football Manager</h3>
             <div class="overlay"></div>
         </div>
-        <div class="container">
-            <h2 id="title">Welcome to the Home Page</h2>
-            <ul>
-                <li><a href="command">Command Page</a></li>
-                <li><a href="player">Player Page</a></li>
-                <li><a href="trainer">Trainer Page</a></li>
-                <li><a href="country">Country Page</a></li>
-            </ul>
+        <div class="content">
+            <div class="container">
+                <h2 id="title">Welcome to the Home Page</h2>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <h4 class="title-table">Евро-2016. Отбор. Группа A</h4>
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th>И</th>
+                                <th>В</th>
+                                <th>Н</th>
+                                <th>П</th>
+                                <th>З</th>
+                                <th>П</th>
+                                <th>О</th>
+                            </tr>
+                            <tr>
+                                <td><a href="command/cheh">Чехия</a></td>
+                                <td>10</td>
+                                <td>7</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>19</td>
+                                <td>14</td>
+                                <td>22</td>
+                            </tr>
+                            <tr>
+                                <td>Ислндия</td>
+                                <td>10</td>
+                                <td>6</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>17</td>
+                                <td>6</td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <td>Турция</td>
+                                <td>10</td>
+                                <td>5</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>14</td>
+                                <td>9</td>
+                                <td>18</td>
+                            </tr>
+                            <tr>
+                                <td>Нидерлнды</td>
+                                <td>10</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>5</td>
+                                <td>17</td>
+                                <td>14</td>
+                                <td>13</td>
+                            </tr>
+                            <tr>
+                                <td>Казахстан</td>
+                                <td>10</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>7</td>
+                                <td>7</td>
+                                <td>18</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>Латвия</td>
+                                <td>10</td>
+                                <td>0</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>19</td>
+                                <td>5</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <h4 class="title-table">Евро-2016. Отбор. Группа B</h4>
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th>И</th>
+                                <th>В</th>
+                                <th>Н</th>
+                                <th>П</th>
+                                <th>З</th>
+                                <th>П</th>
+                                <th>О</th>
+                            </tr>
+                            <tr>
+                                <td>Чехия</td>
+                                <td>10</td>
+                                <td>7</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>19</td>
+                                <td>14</td>
+                                <td>22</td>
+                            </tr>
+                            <tr>
+                                <td>Ислндия</td>
+                                <td>10</td>
+                                <td>6</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>17</td>
+                                <td>6</td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <td>Турция</td>
+                                <td>10</td>
+                                <td>5</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>14</td>
+                                <td>9</td>
+                                <td>18</td>
+                            </tr>
+                            <tr>
+                                <td>Нидерлнды</td>
+                                <td>10</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>5</td>
+                                <td>17</td>
+                                <td>14</td>
+                                <td>13</td>
+                            </tr>
+                            <tr>
+                                <td>Казахстан</td>
+                                <td>10</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>7</td>
+                                <td>7</td>
+                                <td>18</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>Латвия</td>
+                                <td>10</td>
+                                <td>0</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>19</td>
+                                <td>5</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+
+
+
+                <ul>
+                    <li><a href="command">Command Page</a></li>
+                    <li><a href="player">Player Page</a></li>
+                    <li><a href="trainer">Trainer Page</a></li>
+                    <li><a href="country">Country Page</a></li>
+                </ul>
+            </div>
         </div>
 
     {% endblock content %}
