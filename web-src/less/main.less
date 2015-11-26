@@ -1,2 +1,61 @@
 /*---------- app.less ------------*/
 @import "../../bower_components/bootstrap/less/bootstrap.less";
+
+header {
+    height: 70px;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    .logo{
+        a{
+            display: block;
+            width: 60px;
+            height: 81px;
+            background: url("../images/logo.png") center top no-repeat;
+        }
+        float: left;
+    }
+    nav {
+        max-width: 500px;
+        width: 100%;
+        float: right;
+        padding: 15px 20px;
+        ul{
+            float: right;
+            li{
+                list-style: none;
+                display: inline-block;
+                float: left;
+                border: 1px solid white;
+                a{
+                    display: table-cell;
+                    vertical-align: middle;
+                    height: 42px;
+                    padding: 0 10px;
+                    color: white;
+                }
+            }
+            li:hover{
+                background: white;
+                a{
+                    color: #00b3ee;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+.baner{
+    background: url("../images/top_bg.png") center top no-repeat;
+    background-size: cover;
+    min-height: 500px;
+    position: relative;
+    .overlay{
+        top: 0;
+        background-color: rgba(0,0,0,0.7);
+        height: 100%;
+        position: absolute;
+        width: 100%;
+    }
+}

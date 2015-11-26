@@ -10,19 +10,10 @@ gulp.task('less', function() {
         .pipe(gulp.dest('web/css/'));
 });
 
-gulp.task('colorbox', function() {
-    return gulp.src([
-        'bower_components/jquery-colorbox/example3/*',
-        'bower_components/jquery-colorbox/example3/*/*'
-    ])
-        .pipe(gulp.dest('web/css/'));
-});
-
 gulp.task('lib-js', function() {
     return gulp.src([
         'bower_components/jquery/dist/jquery.js',
-        'bower_components/bootstrap/dist/js/bootstrap.js',
-        'bower_components/jquery-colorbox/jquery.colorbox.js'
+        'bower_components/bootstrap/dist/js/bootstrap.js'
     ])
         .pipe(concatJs('all.js'))
         .pipe(minifyJs())
@@ -51,7 +42,7 @@ gulp.task('clean', function () {
 });
 
 gulp.task('default', ['clean'], function () {
-    var tasks = ['fonts', 'less', 'colorbox', 'lib-js', 'pages-js'];
+    var tasks = ['fonts', 'less', 'lib-js', 'pages-js'];
 
     tasks.forEach(function (val) {
         gulp.start(val);

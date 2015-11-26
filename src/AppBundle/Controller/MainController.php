@@ -11,10 +11,10 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 class MainController extends Controller
 {
     /**
-     * @Route("/")
+     * @Route("/", name="/")
      * @Template()
      */
-    public function mainAction()
+    public function homeAction()
     {
         return [];
     }
