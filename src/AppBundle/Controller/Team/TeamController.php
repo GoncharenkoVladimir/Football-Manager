@@ -1,36 +1,89 @@
 <?php
 
-namespace AppBundle\Controller\Player;
+namespace AppBundle\Controller\Team;
 
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use AppBundle\Entity\Team;
 use AppBundle\Entity\Players;
 
 
-class PlayerController extends Controller
+class TeamController extends Controller
 {
     /**
-     * @Route("/player/{id}", name="player")
+     * @Route("/team/{id}", name="team")
      * @Template()
      * @param Int $id
      * @return array
      */
-    public function playerAction($id)
+    public function teamAction($id)
     {
+        $teams = $this->generateTeam();
         $players = $this->generatePlayers();
+        $res1 = null;
+        $res2 = [];
+        foreach ($teams as $value)
+        {
+            /**
+             * @var Team $value
+             */
+            if ($value->getIdTeam() == $id)
+            {
+                $res1 = $value;
+            }
+        }
+
         foreach ($players as $value)
         {
             /**
              * @var Players $value
              */
-            if ($value->getId() == $id)
+            if ($value->getCommand() == $id)
             {
-                return ['player' => $value];
+                $res2[] = $value;
             }
         }
+
+        return ['team' => $res1, 'players' => $res2];
+    }
+
+    public function generateTeam()
+    {
+        $team = new Team();
+        $team->setNameTeam('Чехия');
+        $team->setNameTrainer('Name');
+        $team->setIdTeam(1);
+
+        $team2 = new Team();
+        $team2->setNameTeam('Чехия2');
+        $team2->setNameTrainer('Name2');
+        $team2->setIdTeam(2);
+
+        $team3 = new Team();
+        $team3->setNameTeam('Чехия3');
+        $team3->setNameTrainer('Name3');
+        $team3->setIdTeam(3);
+
+        $team4 = new Team();
+        $team4->setNameTeam('Чехия4');
+        $team4->setNameTrainer('Name4');
+        $team4->setIdTeam(4);
+
+        $team5 = new Team();
+        $team5->setNameTeam('Чехия5');
+        $team5->setNameTrainer('Name5');
+        $team5->setIdTeam(5);
+
+        $team6 = new Team();
+        $team6->setNameTeam('Чехия6');
+        $team6->setNameTrainer('Name6');
+        $team6->setIdTeam(6);
+
+        return [$team, $team2, $team3, $team4, $team5, $team6];
     }
     public function generatePlayers()
     {
