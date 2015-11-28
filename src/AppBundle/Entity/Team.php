@@ -6,7 +6,7 @@ class Team
 {
     protected $nameTeam;
     protected $teamPlayer;
-    protected $nameTrainer;
+    protected $idTrainer;
     protected $idTeam;
 
     /**
@@ -36,17 +36,17 @@ class Team
     /**
      * @return mixed
      */
-    public function getNameTrainer()
+    public function getIdTrainer()
     {
-        return $this->nameTrainer;
+        return $this->idTrainer;
     }
 
     /**
-     * @param mixed $nameTrainer
+     * @param mixed $idTrainer
      */
-    public function setNameTrainer($nameTrainer)
+    public function setIdTrainer($idTrainer)
     {
-        $this->nameTrainer = $nameTrainer;
+        $this->idTrainer = $idTrainer;
     }
 
     /**

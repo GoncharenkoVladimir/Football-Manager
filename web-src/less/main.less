@@ -87,16 +87,35 @@ header {
     table{
         width: 100%;
         margin-bottom: 20px;
+        border: 1px solid #66afe9;
         tr{
             td, th{
                 width: 10%;
                 min-width: 30px;
                 text-align: right;
                 padding: 0 5px;
+                a{
+                    color: #122b40;
+                }
+                a:hover{
+                    text-decoration: none;
+                    color: #66afe9;
+                }
+                .flag{
+                    display: inline-block;
+                    width: 16px;
+                    height: 11px;
+                    margin-right: 10px;
+                }
+                .country1{
+                    background: url("../images/186.png") center top no-repeat;
+                    background-size: cover;
+                }
             }
             td:first-child, th:first-child{
                 width: 30%;
                 min-width: 100px;
+                text-align: left;
             }
         }
         tr:nth-child(odd){
@@ -146,8 +165,10 @@ header {
     padding: 30px 0;
     .foto-player{
         background: url("../images/football_player.jpg") center top no-repeat;
-        width: 256px;
+        width: 100%;
+        max-width: 256px;
         height: 256px;
+        background-size: contain;
     }
     .player-info{
         width: 100%;
@@ -162,5 +183,76 @@ header {
         li:nth-child(odd){
             background-color: #66afe9;
         }
+    }
+}
+.trainer-page{
+    padding: 30px 0;
+    .foto-trainer{
+        background: url("../images/trainer.png") center top no-repeat;
+        width: 100%;
+        max-width: 256px;
+        height: 256px;
+        background-size: contain;
+    }
+    .trainer-info{
+        width: 100%;
+        max-width: 300px;
+        border: 1px solid #66afe9;
+        padding: 0;
+        li{
+            list-style: none;
+            padding: 10px 20px;
+
+        }
+        li:nth-child(odd){
+            background-color: #66afe9;
+        }
+    }
+}
+.footer{
+    background-color: #122b40;
+    .logo{
+        margin-top: 20px;
+        a{
+            display: block;
+            width: 60px;
+            height: 81px;
+            background: url("../images/logo.png") center top no-repeat;
+        }
+        float: left;
+    }
+    nav {
+        max-width: 500px;
+        width: 100%;
+        float: right;
+        padding: 15px 20px;
+        ul{
+            float: right;
+            li{
+                list-style: none;
+                display: inline-block;
+                float: left;
+                border: 1px solid white;
+                a{
+                    display: table-cell;
+                    vertical-align: middle;
+                    height: 42px;
+                    padding: 0 10px;
+                    color: white;
+                }
+            }
+            li:hover{
+                background: white;
+                a{
+                    color: #00b3ee;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .copyright{
+        display: block;
+        clear: both;
+        color: white;
     }
 }

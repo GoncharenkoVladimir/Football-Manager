@@ -15,6 +15,11 @@
                             {% endif %}
                         {% endfor %}
                     </ul>
+                    <p><span>Тренер: </span>
+                        {% if trainers.idTeam == team.idTeam %}
+                            <a href="{{ path('trainer', {'id': trainers.id}) }}">{{ trainers.name }} {{ trainers.secondName }}</a>
+                        {% endif %}
+                    </p>
                 </div>
             </div>
 

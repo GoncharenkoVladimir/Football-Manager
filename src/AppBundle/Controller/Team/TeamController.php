@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use AppBundle\Entity\Team;
 use AppBundle\Entity\Players;
+use AppBundle\Entity\Trainers;
 
 
 class TeamController extends Controller
@@ -24,8 +25,10 @@ class TeamController extends Controller
     {
         $teams = $this->generateTeam();
         $players = $this->generatePlayers();
+        $trainers = $this->generateTrainers();
         $res1 = null;
         $res2 = [];
+        $res3 = null;
         foreach ($teams as $value)
         {
             /**
@@ -36,7 +39,16 @@ class TeamController extends Controller
                 $res1 = $value;
             }
         }
-
+        foreach ($trainers as $value)
+        {
+            /**
+             * @var Trainers $value
+             */
+            if ($value->getIdTeam() == $id)
+            {
+                $res3 = $value;
+            }
+        }
         foreach ($players as $value)
         {
             /**
@@ -48,39 +60,39 @@ class TeamController extends Controller
             }
         }
 
-        return ['team' => $res1, 'players' => $res2];
+        return ['team' => $res1, 'players' => $res2, 'trainers' => $res3];
     }
 
     public function generateTeam()
     {
         $team = new Team();
         $team->setNameTeam('Чехия');
-        $team->setNameTrainer('Name');
+        $team->setIdTrainer(1);
         $team->setIdTeam(1);
 
         $team2 = new Team();
-        $team2->setNameTeam('Чехия2');
-        $team2->setNameTrainer('Name2');
+        $team2->setNameTeam('Исландия');
+        $team2->setIdTrainer(2);
         $team2->setIdTeam(2);
 
         $team3 = new Team();
-        $team3->setNameTeam('Чехия3');
-        $team3->setNameTrainer('Name3');
+        $team3->setNameTeam('Турция');
+        $team3->setIdTrainer(3);
         $team3->setIdTeam(3);
 
         $team4 = new Team();
-        $team4->setNameTeam('Чехия4');
-        $team4->setNameTrainer('Name4');
+        $team4->setNameTeam('Нидерланды');
+        $team4->setIdTrainer(4);
         $team4->setIdTeam(4);
 
         $team5 = new Team();
-        $team5->setNameTeam('Чехия5');
-        $team5->setNameTrainer('Name5');
+        $team5->setNameTeam('Казахстан');
+        $team5->setIdTrainer(5);
         $team5->setIdTeam(5);
 
         $team6 = new Team();
-        $team6->setNameTeam('Чехия6');
-        $team6->setNameTrainer('Name6');
+        $team6->setNameTeam('Латвия');
+        $team6->setIdTrainer(6);
         $team6->setIdTeam(6);
 
         return [$team, $team2, $team3, $team4, $team5, $team6];
@@ -133,5 +145,30 @@ class TeamController extends Controller
         $player5->setNumber(17);
 
         return [$player, $player2, $player3, $player4, $player5];
+    }
+    public function generateTrainers()
+    {
+        $trainer = new Trainers();
+        $trainer->setId(1);
+        $trainer->setName('Ivan');
+        $trainer->setSecondName('Ivanov');
+        $trainer->setAge(46);
+        $trainer->setIdTeam(1);
+
+        $trainer2 = new Trainers();
+        $trainer2->setId(2);
+        $trainer2->setName('Ivan2');
+        $trainer2->setSecondName('Ivanov2');
+        $trainer2->setAge(46);
+        $trainer2->setIdTeam(2);
+
+        $trainer3 = new Trainers();
+        $trainer3->setId(3);
+        $trainer3->setName('Ivan3');
+        $trainer3->setSecondName('Ivanov3');
+        $trainer3->setAge(46);
+        $trainer3->setIdTeam(3);
+
+        return [$trainer, $trainer2, $trainer3];
     }
 }
