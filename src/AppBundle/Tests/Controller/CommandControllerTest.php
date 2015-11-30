@@ -8,7 +8,7 @@ class CommandControllerTest extends WebTestCase
     public function testIndex()
     {
         $client = static::createClient();
-        $crawler = $client->request('GET', '/trainer/1');
+        $crawler = $client->request('GET', '/team/1');
         $this->assertContains('Сборная страны Чехия', $crawler->filter('.baner h3')->text());
     }
 }
