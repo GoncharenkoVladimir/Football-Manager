@@ -20,7 +20,7 @@ class CountryControllerTest extends WebTestCase
     public function testIndexProvider()
     {
         return [
-            ['/country', 404],
+            ['/country', 500],
             ['/player', 404],
         ];
     }
