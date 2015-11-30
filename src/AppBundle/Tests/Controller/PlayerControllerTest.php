@@ -12,7 +12,7 @@ class PlayerControllerTest extends WebTestCase
         $crawler = $client->request('GET', '/player/1');
 
 
-        $this->assertEquals(
+        $this->assertContains(
             'Vasiliy Pupkin',
             $crawler->filter('baner h3')->text());
     }
