@@ -13,7 +13,6 @@ class PlayerControllerTest extends WebTestCase
 
         $this->assertEquals(
             'Vasiliy Pupkin',
-            $crawler->filter('baner > h3:contains()')
-        );
+            $crawler->filter('h3'));
     }
 }
