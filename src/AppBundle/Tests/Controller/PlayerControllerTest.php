@@ -11,6 +11,7 @@ class PlayerControllerTest extends WebTestCase
 
         $crawler = $client->request('GET', '/player/1');
 
+
         $this->assertEquals(
             'Vasiliy Pupkin',
             $crawler->filter('h3:contains'));
